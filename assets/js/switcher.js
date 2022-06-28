@@ -47,7 +47,7 @@ jQuery(document).ready(function ($) {
     $('.desktop').addClass('active');
 
 
-let pageUrl = $(location).attr('pathname');
+let pageUrl = location.pathname
 
 const hideipadandiphone = function(){
   document.querySelector('.iphone').style.display = 'none'
