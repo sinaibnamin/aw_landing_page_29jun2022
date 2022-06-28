@@ -50,8 +50,8 @@ jQuery(document).ready(function ($) {
 let pageUrl = location.pathname
 
 const hideipadandiphone = function(){
-  parent.document.querySelector('.iphone').style.display = 'none'
-  parent.document.querySelector('.ipad').style.display = 'none'
+  document.querySelector('.iphone').style.display = 'none'
+  document.querySelector('.ipad').style.display = 'none'
 }
 
 
@@ -65,6 +65,7 @@ if(pageUrl.match("apiCreative")){
 }
 
 if(pageUrl.match("animatedBanner")){
+  console.log('animated got')
   if(pageUrl.match("slide7")){
     hideipadandiphone();
   }
