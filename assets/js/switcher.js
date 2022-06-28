@@ -48,33 +48,27 @@ jQuery(document).ready(function ($) {
 
 
 let pageUrl = location.pathname
-console.log('pageurl: ', pageUrl)
+
 const hideipadandiphone = function(){
   document.querySelector('.iphone').style.display = 'none'
   document.querySelector('.ipad').style.display = 'none'
 }
 
 
-if(pageUrl.match("takeover")){
+if(pageUrl.match(/takeover/gi)){
   hideipadandiphone();
 }
-if(pageUrl.match("apiCreative")){
-  if(pageUrl.match("slide2")){
+if(pageUrl.match(/apiCreative/gi)){
+  if(pageUrl.match(/slide2/gi)){
     hideipadandiphone();
   }
 }
 
-if(pageUrl.match("animatedBanner")){
-console.log('animation got')
-  if(pageUrl.match("slide7")){
+if(pageUrl.match(/animatedBanner/gi)){
+  if(pageUrl.match(/slide[1,2,7]/gi)){
     hideipadandiphone();
   }
-  if(pageUrl.match("slide1")){
-    hideipadandiphone();
-  }
-  if(pageUrl.match("slide2")){
-    hideipadandiphone();
-  }
+
 }
 
 
