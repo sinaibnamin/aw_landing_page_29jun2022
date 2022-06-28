@@ -50,8 +50,8 @@ jQuery(document).ready(function ($) {
 let pageUrl = location.pathname
 
 const hideipadandiphone = function(){
-  document.querySelector('.iphone').style.display = 'none'
-  document.querySelector('.ipad').style.display = 'none'
+  parent.document.querySelector('.iphone').style.display = 'none'
+  parent.document.querySelector('.ipad').style.display = 'none'
 }
 
 
