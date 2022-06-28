@@ -1,0 +1,166 @@
+@media (max-width:420px){.air-quality-card,.header-search-bar,.lifestyle-index-list{display:none!important}}
+
+/* sncss */
+
+.desktopAlertPopup{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99999999999999999;
+  background: #000000ad;
+  display: none;
+  opacity: 0;
+  transition: all 1s;
+}
+.desktopAlertPopup.active{
+  display: block;
+  opacity: 1;
+  animation: alertpopupanim .3s both;
+}
+@keyframes alertpopupanim {
+  from{opacity: 0}
+  to{opacity: 1}
+}
+
+.desktopAlertPopup .mainAlert{
+  position: absolute;
+  height: 200px;
+  width: 90%;
+  inset:0;
+  margin: auto;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+    justify-content: space-between;
+}
+.desktopAlertPopup .alertheadline {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff0100;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ff0100;
+}
+.desktopAlertPopup .alertParagraph{
+  font-size: 13px;
+  font-weight: 400;
+  color: #000000;
+  padding: 10px 20px;
+}
+.desktopAlertPopup .alert-footer{
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.desktopAlertPopup .alert-close-button{
+  background: red;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+
+#switcher-container{
+  /* display: block; */
+}
+
+#switcher {
+  background-color: #ebebeb;
+  font-size: 14px;
+  height: 45px;
+  width: 100%;
+  z-index: 999999;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+#switcher>li {
+  margin: 0 10px;
+  float: left;
+  position: relative
+}
+
+
+
+
+
+
+.resize-icon {
+  border-radius: 2px;
+  display: block;
+  height: 30px;
+  width: 30px
+}
+
+.resize-icon.active {
+  background-color: #ff5d13;
+  border-radius: 4px
+}
+
+.resize li:first-child {
+  margin-left: 10px
+}
+
+.resize li {
+  display: inline-block;
+  margin-top: 7px
+}
+
+.resize-icon.desktop {
+  background-position: -77px -42px
+}
+
+.resize-icon.ipad {
+  background-position: -112px -43px
+}
+
+.resize-icon.iphone {
+  background-position: -145px -43px
+}
+
+.resize-icon.active {
+  background-color: #ff5d13;
+  border-radius: 5px
+}
+
+.resize-icon.desktop.active {
+  background-position: -77px -78px
+}
+
+.resize-icon.ipad.active {
+  background-position: -112px -79px
+}
+
+.resize-icon.iphone.active {
+  background-position: -145px -79px
+}
+
+
+@media all and (-webkit-min-device-pixel-ratio:1.5), (min-resolution:192dpi) {
+  span.themefree, span.themenew {
+    padding-bottom: 4px
+  }
+
+  .sprite {
+    background-image: url(../../assets/img/switcher/sprite2x.png);
+    background-size: 300px 150px
+  }
+
+  .ipad-resize {
+    background-image: url(../../assets/img/switcher/iPad2x.png);
+    background-size: 913px 1221px;
+    background-position: top;
+  }
+
+  .iphone-resize {
+    background-image: url(../../assets/img/switcher/iPhone2x.png);
+    background-position: top;
+    background-size: 420px 814px;
+  }
+}

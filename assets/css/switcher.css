@@ -1,0 +1,264 @@
+body {
+  background: #ebebeb;
+  font: 14px Helvetica, Arial, Geneva, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  padding: 0;
+  margin: 0
+}
+
+body.full {
+  background: #ebebeb
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out
+}
+
+.sprite {
+  background-image: url(../../assets/img/switcher/sprite.png);
+  background-repeat: no-repeat
+}
+
+html {
+  height: 100%
+}
+
+#iframe {
+  height: 100%
+}
+
+#iframe-wrap {
+  position: relative;
+  z-index: 50;
+  height: calc(100% - 48px);
+  margin: 0 auto;
+  overflow: visible;
+  -webkit-transition: all .7s ease-in-out;
+  -moz-transition: all .7s ease-in-out;
+  -ms-transition: all .7s ease-in-out;
+  -o-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out
+}
+
+.desktop-resize {
+  width: 100%;
+  height: 100%
+}
+
+.ipad-resize {
+  width: 768px;
+  height: 924px !important;
+  margin: 0 auto;
+  margin-top: 40px !important;
+  padding: 79px 77px 140px 69px;
+  background: url(../../assets/img/switcher/iPad.png) no-repeat center;
+  background-size: contain
+}
+
+.iphone-resize {
+  width: 375px;
+  height: 667px !important;
+  margin: 40px auto !important;
+  margin-bottom: 50px;
+  padding-top: 40px;
+  background: url(../../assets/img/switcher/iPhone2x.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 71px 65px 103px 70px
+}
+
+.destop-resize, .ipad-resize, .iphone-resize {
+  -webkit-transition: all .7s ease-in-out;
+  -moz-transition: all .7s ease-in-out;
+  -ms-transition: all .7s ease-in-out;
+  -o-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out
+}
+
+#container {
+  height: 45px
+}
+
+#switcher {
+  background-color: #ebebeb;
+  position: fixed;
+  font-size: 14px;
+  height: 45px;
+  width: 100%;
+  z-index: 999999;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+#switcher>li {
+  margin: 0 10px;
+  float: left;
+  position: relative
+}
+
+.logo {
+  width: 168px;
+  height: 24px;
+  margin-left: 8px;
+  margin-top: 6px;
+  background: url(../../../assets/img/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: none
+}
+
+.logo a {
+  display: block;
+  height: 32px
+}
+
+.branding {
+  height: 45px;
+  padding: 0 25px;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  display: none
+}
+
+.resize-icon {
+  border-radius: 2px;
+  display: block;
+  height: 30px;
+  width: 30px
+}
+
+.resize-icon.active {
+  background-color: #ff5d13;
+  border-radius: 4px
+}
+
+.resize li:first-child {
+  margin-left: 10px
+}
+
+.resize li {
+  display: inline-block;
+  margin-top: 7px
+}
+
+.resize-icon.desktop {
+  background-position: -77px -42px
+}
+
+.resize-icon.ipad {
+  background-position: -112px -43px
+}
+
+.resize-icon.iphone {
+  background-position: -145px -43px
+}
+
+.resize-icon.active, .resize-icon:hover {
+  background-color: #ff5d13;
+  border-radius: 5px
+}
+
+.resize-icon.desktop.active, .resize-icon.desktop:hover {
+  background-position: -77px -78px
+}
+
+.resize-icon.ipad.active, .resize-icon.ipad:hover {
+  background-position: -112px -79px
+}
+
+.resize-icon.iphone.active, .resize-icon.iphone:hover {
+  background-position: -145px -79px
+}
+
+li.remove_frame {
+  float: right !important;
+  position: relative
+}
+
+li.remove_frame a {
+  background-position: -186px -50px;
+  display: inline;
+  height: 12px;
+  left: 16px;
+  position: absolute;
+  top: 16px;
+  width: 12px;
+  -webkit-transition: 0s !important;
+  -moz-transition: 0s !important;
+  -o-transition: 0s !important;
+  transition: 0s !important
+}
+
+li.remove_frame a:hover {
+  background-position: -186px -88px
+}
+
+li.remove_frame {
+  width: 45px;
+  height: 45px;
+  margin: 0 !important
+}
+
+@media only screen and (max-width :767px) {
+  #switcher .thumb, .hide {
+    display: none
+  }
+
+  li.resize {
+    display: none
+  }
+
+  li.bold-item {
+    width: 34px
+  }
+
+  .dropdown, .dropdown .items {
+    width: 175px
+  }
+
+  li.bold-item.purchase {
+    text-indent: -9999em;
+    width: 50px
+  }
+
+  span.cart-icon {
+    right: 29px
+  }
+}
+
+@media all and (-webkit-min-device-pixel-ratio:1.5), (min-resolution:192dpi) {
+  span.themefree, span.themenew {
+    padding-bottom: 4px
+  }
+
+  .sprite {
+    background-image: url(../../assets/img/switcher/sprite2x.png);
+    background-size: 300px 150px
+  }
+
+  .ipad-resize {
+    background-image: url(../../assets/img/switcher/iPad2x.png);
+    background-size: 913px 1221px;
+    background-position: top;
+  }
+
+  .iphone-resize {
+    background-image: url(../../assets/img/switcher/iPhone2x.png);
+    background-position: top;
+    background-size: 420px 814px;
+  }
+}
