@@ -65,7 +65,7 @@ if(pageUrl.match(/apiCreative/gi)){
 }
 
 if(pageUrl.match(/animatedBanner/gi)){
-  if(pageUrl.match(/slide[1,2,7]/gi)){
+  if(pageUrl.match(/slide[1,2,7,8]/gi)){
     hideipadandiphone();
   }
 

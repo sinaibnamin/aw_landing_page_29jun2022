@@ -164,3 +164,24 @@
     background-size: 420px 814px;
   }
 }
+
+span.themefree, span.themenew {
+  padding-bottom: 4px
+}
+
+.sprite {
+  background-image: url(../../assets/img/switcher/sprite2x.png);
+  background-size: 300px 150px
+}
+
+.ipad-resize {
+  background-image: url(../../assets/img/switcher/iPad2x.png);
+  background-size: 913px 1221px;
+  background-position: top;
+}
+
+.iphone-resize {
+  background-image: url(../../assets/img/switcher/iPhone2x.png);
+  background-position: top;
+  background-size: 420px 814px;
+}

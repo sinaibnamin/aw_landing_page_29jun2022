@@ -549,24 +549,12 @@ const setAdItem = geturl => {
 const desktopAlertPopup = document.querySelector('#desktopAlertPopup')
 
 if (document.documentElement.clientWidth < 1025) {
-  if (geturl.match("takeover")) {
+  if (geturl.match(/takeover/gi)) {
     desktopAlertPopupopen()
     return
   }
-  if (geturl.match("animatedBanner")) {
-    if (geturl.match("slide1")) {
-      desktopAlertPopupopen()
-      return
-    }
-    if (geturl.match("slide2")) {
-      desktopAlertPopupopen()
-      return
-    }
-    if (geturl.match("slide7")) {
-      desktopAlertPopupopen()
-      return
-    }
-    if (geturl.match("slide8")) {
+  if (geturl.match(/animatedBanner/gi)) {
+    if (geturl.match(/slide[1,2,7,8]/gi)) {
       desktopAlertPopupopen()
       return
     }
@@ -574,12 +562,12 @@ if (document.documentElement.clientWidth < 1025) {
     return
   }
 
-  if (geturl.match("crossPlatformHero")) {
+  if (geturl.match(/crossPlatformHero/gi)) {
     window.open(`./awBanner/${geturl}/ad.html`)
     return
   }
-  if (geturl.match("apiCreative")) {
-    if (geturl.match("slide2")) {
+  if (geturl.match(/apiCreative/gi)) {
+    if (geturl.match(/slide2/gi)) {
       desktopAlertPopupopen()
       return
     }
